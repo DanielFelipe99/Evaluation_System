@@ -16,7 +16,10 @@ class TestResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationGroup = 'Test';
     protected static ?string $navigationLabel = 'Tests';
+
     
+    
+
     public static function form(Form $form): Form
     {
         return $form
@@ -68,8 +71,8 @@ class TestResource extends Resource
                             ->maxItems(4)
                             ->required(),
                     ])
-                    ->minItems(20)
-                    ->maxItems(20)
+                    ->minItems(3)
+                    ->maxItems(3)
                     ->required(),
             ]);
     }

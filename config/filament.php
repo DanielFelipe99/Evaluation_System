@@ -92,11 +92,12 @@ return [
         'logout_redirect' => '/',  // Modelo correcto
     ],
 
+    
   
     'panels' => [
     'admin' => \App\Providers\Filament\AdminPanelProvider::class,
-    'coordinador' => \App\Providers\Filament\CoordinadorPanelProvider::class,
-    'docente' => \App\Providers\Filament\DocentePanelProvider::class,  // Registrar el panel de docente
+    'coordinador' => \App\Providers\Filament\CoordinadorPanelPanelProvider::class,
+    'docente' => \App\Providers\Filament\DocentePanelPanelProvider::class,  // Registrar el panel de docente
 ],
 
 ];

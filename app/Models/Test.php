@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Test extends Model
 {
-    protected $fillable = ['name','category','description'];
+    protected $fillable = ['name', 'category', 'description'];
 
     public function questions()
     {
@@ -16,5 +16,12 @@ class Test extends Model
     public function institutions()
     {
         return $this->belongsToMany(Institution::class, 'institution_test');
+    }
+
+    // app/Models/Test.php
+    // Añade esta relación
+    public function assignments()
+    {
+        return $this->hasMany(Assignment::class);
     }
 }

@@ -1,5 +1,9 @@
 <?php
 
+namespace App\Filament\Resources\MyAssignedTestResource\Pages;
+use App\Filament\Resources\AssignmentResource\Pages\AnswerTest;
+use Filament\Pages\Page;
+use Filament\Facades\Filament;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
@@ -8,6 +12,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Log;
+use App\Filament\Pages\MyAssignedTests;
+use App\Filament\Pages\TakeTest;
 
 // Ruta principal: redirige al panel de Filament si el usuario está autenticado, de lo contrario al login.
 Route::get('/', function () {
@@ -78,4 +84,5 @@ Route::post('/password/reset', function (Request $request) {
         : back()->withErrors(['email' => [__($status)]]);
 })->name('password.update');
 
-
+//Route::get('/docente/test/{assignment}/responder', [AnswerTest::class, 'edit'])
+    //->name('assignment.answerTest');

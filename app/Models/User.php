@@ -22,8 +22,8 @@ class User extends Authenticatable implements MustVerifyEmail
         'name',
         'email',
         'password',
-        'phone',         
-        'date_of_birth', 
+        'phone',
+        'date_of_birth',
     ];
 
     /**
@@ -48,4 +48,12 @@ class User extends Authenticatable implements MustVerifyEmail
             'password' => 'hashed',
         ];
     }
+
+    // app/Models/User.php
+    // Añade esta relación
+    public function assignments()
+    {
+        return $this->hasMany(Assignment::class);
+    }
+
 }
